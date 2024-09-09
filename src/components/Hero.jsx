@@ -1,27 +1,71 @@
+"use client"
 import Image from 'next/image'
-import React from 'react';
-import img from '../assests/productdemo.png'
+import {useState} from 'react'; 
+import { NextIcon, PrevIcon } from './SliderIcons';
+import Link from 'next/link';
+import { SliderItems } from '@/shared/itemsSlider';
 
 const HeroComponent = () => {
-  return (
-    // h-[30vh] md:h-[40vh] lg:h-[40vh]
-    <div className=' shadow-xl h-[70vh] py-2 border-[1px] border-red-600 rounded-lg'>
-            <h1 className='px-12 text-white font-extralight'>New product</h1>
-            <div className='bg-[#8000003a] h-[25vh] mt-8 rounded-md relative flex items-center'>
-            <div className='p-12'>
-                <h1>Spciest  then ever</h1>
-                <h1>From the roots of Ladakh.</h1>
-            </div>
-                <Image className='absolute right-0' src={img} width={500} height={500} alt='image' />
-            </div>
-            <div className='p-12 w-2/3'>
-                <p>Free Download User 1600 SVG vector file in monocolor and multicolor 
-                type for Sketch and Figma from User 1600 Vectors svg vector collection.
-                User 1600 Vectors SVG vector illustration</p>
-                <button className='bg-red-800 p-2 text-white rounded-full '>
-                    Shop now
-                </button>
-            </div>
+  const [current, setcurrent] = useState(0);
+  const [items, setItems] = useState(SliderItems);
+  let length = items?.length;
+
+  function handlePrev() { 
+    setcurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
+}
+
+function handleNext() {
+    setcurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+}
+
+  return ( 
+    <> <div className='hidden md:block h-[70vh] relative'> 
+    <Slider item={items[current]}/>
+    <div className=' absolute flex gap-8 items-center right-2 bottom-2'>
+    <PrevIcon onHandle={handlePrev} color='#800000'/>
+        <span className='w-8 h-8 border-2 border-lh font-bold text-lh rounded-full flex items-center justify-center'>{current+1}</span>
+      <NextIcon onHandle={handleNext} color='#800000'/>
+    </div>
+    
+</div>
+{/* mobile */}
+   <div className=' md:hidden h-[30vh] relative'> 
+   <MobileSlider/>
+          {/* <Slider item={items[current]}/>
+          <div className=' absolute flex gap-8 items-center right-2 bottom-2'>
+          <PrevIcon onHandle={handlePrev} color='#800000'/>
+              <span className='w-8 h-8 border-2 border-lh font-bold text-lh rounded-full flex items-center justify-center'>{current+1}</span>
+            <NextIcon onHandle={handleNext} color='#800000'/>
+          </div>
+           */}
+    </div>
+</>
+  )
+}
+
+export const Slider=({item})=>{
+  return(
+    <div className='my-4 shadow-md transition-all ease-out duration-500 h-full w-full'>
+    <h1 className='px-12 text-base font-light text-lh'>{item?.label}</h1>
+     <div className='bg-[#80000034] px-12 shadow-xl h-[25vh] mt-6 relative flex items-center'> 
+         <h1 className='text-3xl text-gray-700 w-1/2 font-medium leading-10'>{item?.title}</h1>
+         <Image className='absolute -top-[50px] right-0' src={item?.src} width={380} height={380} alt='product image' />
+     </div>
+     <div className='px-12 pt-6 w-2/3'>
+         <p className='leading-7 text-base text-gray-600 font-light'>{item?.desc}</p>
+         <button className='bg-lh w-max font-medium py-2 px-6 mt-4 hover:text-lh hover:bg-white transition-all ease-in-out duration-400 text-white rounded-full '>
+             <Link href={'/'}>Shop now</Link>
+         </button>
+     </div>
+    </div>
+  )
+}
+
+
+export const MobileSlider=()=>{
+  return(
+    <div className='w-full h-full bg-slate-500'>
+ggg
     </div>
   )
 }

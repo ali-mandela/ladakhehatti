@@ -30,6 +30,23 @@ body {
   }
 }
 
+  
+::-webkit-scrollbar {
+  width:4px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: #800;
+}
+
 /*
     COLORS
     CULTURAL

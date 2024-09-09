@@ -9,8 +9,10 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        foreground: "var(--foreground)", 
+        lh:"#800000"
       },
+     
     },
   },
   plugins: [],
