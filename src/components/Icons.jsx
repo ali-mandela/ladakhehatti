@@ -1,7 +1,8 @@
 "use client";
 
-import { menu } from '@/shared/menulist';
+import { menu, mneuweb } from '@/shared/menulist';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import React, {useState} from 'react';
 
 export const MobileCartIcon = ({
@@ -9,6 +10,7 @@ export const MobileCartIcon = ({
     size = 34
 }) => {
     return (
+        <Link href='/cart'>
         <div className="flex items-center">
             <svg
                 viewBox="0 0 24 24"
@@ -50,7 +52,7 @@ export const MobileCartIcon = ({
                         strokeLinejoin="round"></path>
                 </g>
             </svg>
-        </div>
+        </div></Link>
     );
 };
 
@@ -60,6 +62,9 @@ export const MenuIcon = ({
 }) => {
     const [open,
         setOpen] = useState(false);
+const router = useRouter();
+const pathname = usePathname();
+ 
 
     return (
         <div className="">
@@ -75,8 +80,8 @@ export const MenuIcon = ({
                             width={size}
                             height={size}
                             fill="#000000">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                             <g id="SVGRepo_iconCarrier">
                                 <g>
                                     <path
@@ -127,11 +132,40 @@ export const MenuIcon = ({
                 : '-translate-x-full opacity-0'} absolute bg-neutral-100 left-0 w-full top-20 h-[calc(100vh-80px)] z-50`}>
                 <div className="p-4 flex flex-col py-12 gap-8"> 
                     {
-                        menu.map((item)=><Link className='text-lg text-[#800000]' key={item.id} href={item.path}>{item.name}</Link>)
+                        menu.map((item)=><p className={`${pathname == item.path ? "text-[#800000] font-medium underline text-lg underline-offset-4 ":"text-lg"}`} onClick={()=>{
+                            router.push(item.path);
+                            setOpen(false)
+                        }} key={item.id} >{item.name}</p>)
                     }
                 </div>
             </div>
 
         </div>
+    );
+};
+
+
+export const MenuItems = () => {
+    const pathname = usePathname();
+ 
+    return (
+        <div className='flex gap-12'>
+            {
+                mneuweb.map((item) => 
+                <Link 
+                href={item.path}
+                className={`${pathname == item.path ? "underline underline-offset-8" : ""} text-[#FFFAFA] text-lg font-light`}
+                key={item.id} >{item.name}</Link>)
+            }
+        </div>
+    )
+}
+
+export const NavbarTitle = () => {
+    const pathname = usePathname();
+     return (
+        <h1 className={`${pathname === '/' ? "underline underline-offset-8" : ""} text-xl text-white font-extralight`}>
+            <Link href='/'>Ladakh-e-hatti</Link>
+        </h1>
     );
 };
