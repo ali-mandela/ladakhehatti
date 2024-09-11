@@ -51,3 +51,95 @@ export const SliderItems = [
         path: "/"
     }
 ];
+
+
+export const ProductItems = [
+        {
+          id: 1,
+          name: "Organic Ladakhi Apricots",
+          description: "Sun-dried apricots from the lush orchards of Nubra Valley. These golden fruits are packed with natural sweetness and essential nutrients.",
+          price: 299,
+          discountPrice: 250,
+          weight: "500",
+          unit: "g",
+          category: "Dried Fruits",
+          brand: "Nubra Organics",
+          images: {
+            primary: "/images/ladakh-apricots-primary.jpg",
+            secondary: "/images/ladakh-apricots-secondary.jpg",
+          },
+          inStock: true,
+          stockQuantity: 100,
+          ratings: {
+            average: 4.7,
+            count: 28
+          },
+          tags: ["organic", "apricots", "dried fruits", "Nubra Valley", "healthy snacks"]
+        },
+        {
+          id: 2,
+          name: "Ladakhi Barley Flour  ",
+          description: "Traditional stone-ground barley flour, a staple in Ladakhi cuisine. Perfect for making tsampa and other local delicacies.",
+          price: 180,
+          discountPrice: null,
+          weight: "1",
+          unit: "kg",
+          category: "Flours",
+          brand: "Leh Mills",
+          images: {
+            primary: "/images/barley-flour-primary.jpg",
+            secondary: "/images/barley-flour-secondary.jpg",
+          },
+          inStock: true,
+          stockQuantity: 50,
+          ratings: {
+            average: 4.9,
+            count: 42
+          },
+          tags: ["barley", "flour", "tsampa", "traditional", "gluten-free"]
+        },
+        {
+          id: 3,
+          name: "Ladakhi Wild Buckthorn Juice",
+          description: "100% pure sea buckthorn juice, known locally as 'Leh Berry'. Rich in vitamins and antioxidants, this tart juice is a Ladakhi superfood.",
+          price: 450,
+          discountPrice: 399,
+          weight: "750",
+          unit: "ml",
+          category: "Beverages",
+          brand: "Ladakh Berries",
+          images: {
+            primary: "/images/sea-buckthorn-juice-primary.jpg",
+            secondary: "/images/sea-buckthorn-juice-secondary.jpg",
+          },
+          inStock: true,
+          stockQuantity: 30,
+          ratings: {
+            average: 4.6,
+            count: 15
+          },
+          tags: ["sea buckthorn", "juice", "superfood", "antioxidants", "Leh Berry"]
+        },
+        {
+          id: 4,
+          name: "Ladakhi Pashmina Shawl",
+          description: "Exquisitely soft and warm pashmina shawl, handwoven by skilled artisans in Ladakh using traditional techniques.",
+          price: 8000,
+          discountPrice: 7500,
+          weight: "200",
+          unit: "g",
+          category: "Textiles",
+          brand: "Changthang Crafts",
+          images: {
+            primary: "/images/pashmina-shawl-primary.jpg",
+            secondary: "/images/pashmina-shawl-secondary.jpg",
+          },
+          inStock: true,
+          stockQuantity: 10,
+          ratings: {
+            average: 5.0,
+            count: 7
+          },
+          tags: ["pashmina", "shawl", "handwoven", "luxury", "traditional craft"]
+        }
+      ];

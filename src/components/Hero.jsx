@@ -27,8 +27,8 @@ useEffect(() => {
   return () => clearInterval(intervalId);   
 }, [length]);  
 
-  return ( 
-    <Container > <div className='hidden md:block h-[70vh] relative  	'> 
+  return ( <>
+    <div className='hidden shadow-sm bg-zinc-50 md:block h-[70vh] relative  	'> 
     <Slider item={items[current]}/>
     <div className=' absolute flex gap-8 items-center right-2 bottom-2'>
     <PrevIcon onHandle={handlePrev} color='#800000'/>
@@ -38,7 +38,7 @@ useEffect(() => {
     
 </div>
 {/* mobile */}
-   <div className=' md:hidden w-full bg-neutral-300 shadow-md h-[30vh] relative'> 
+   <div className=' md:hidden w-full bg-zinc-50  shadow-md h-[30vh] relative'> 
    <MobileSlider item={items[current]}/>
    <div className=' absolute flex gap-8 items-center right-[30%] bottom-1'>
           <PrevIcon size={22} onHandle={handlePrev} color='grey'/>
@@ -46,14 +46,14 @@ useEffect(() => {
             <NextIcon size={22} onHandle={handleNext} color='grey'/>
           </div>
                  
-    </div> 
-</Container>
+    </div>  
+    </>
   )
 }
 
 export const Slider=({item})=>{
   return(
-    <div className='my-4 shadow-md transition-all ease-out duration-500 h-full w-full'>
+    <div className='my-4   transition-all ease-out duration-500 h-full w-full'>
     <h1 className='px-12 text-base font-light text-lh'>{item?.label}</h1>
      <div className='bg-[#80000034] px-12 shadow-xl h-[25vh] mt-6 relative flex items-center'> 
          <h1 className='text-3xl text-gray-700 w-1/2 font-medium leading-10'>{item?.title}</h1>
@@ -61,7 +61,7 @@ export const Slider=({item})=>{
      </div>
      <div className='px-12 pt-6 w-2/3'>
          <p className='leading-7 text-base text-gray-600 font-light'>{item?.desc}</p>
-         <button className='bg-lh w-max font-medium py-2 px-6 mt-4 hover:text-lh hover:bg-white transition-all ease-in-out duration-400 text-white rounded-full '>
+         <button className='text-center text-base font-semibold bg-[#FF5733] text-white duration-500 border-[2px] px-4 py-2 hover:text-[#FF5733] rounded-full w-max hover:bg-white hover:border-[#FF5733]'>
              <Link href={'/'}>Shop now</Link>
          </button>
      </div>

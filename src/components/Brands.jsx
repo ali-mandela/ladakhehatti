@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Container from './Layout';
 import catImage from '../assests/cat.png';
+import Button from './Button';
 
 const Brands = () => {
     return (
         <Container bg={'bg-zinc-50'}>
             <div className='my-12   '>
                 <h1 className='text-3xl font-semibold text-[#C70039]'>Top Locals from Ladakh</h1>
-                <div className='flex overflow-x-scroll w-full gap-4 my-8'>
+                <div className='flex overflow-x-auto w-full gap-4 my-8'>
                   <Brand/>
                   <Brand/>
                   <Brand/>
@@ -15,6 +16,7 @@ const Brands = () => {
                   <Brand/>
                   <Brand/>
                 </div>
+                <Button/>
             </div>
         </Container>
     )
