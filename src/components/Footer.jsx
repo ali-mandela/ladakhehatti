@@ -24,7 +24,7 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="border-t border-white pt-4">
-          <p className='text-center'>&copy; 2024 Ladakh-e-Hatti. All rights reserved.</p> 
+          <p className='text-center'>2024 Ladakh-e-Hatti. All rights reserved.</p> 
         </div>
       </div>
     </footer>
