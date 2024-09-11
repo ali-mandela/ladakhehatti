@@ -52,9 +52,9 @@ export const mneuweb = [
         name: "About Us",
         path: "/about"
     },
-    {
-        id: 4,
-        name: "Contact",
-        path: "/contact"
-    },
+    // {
+    //     id: 4,
+    //     name: "Contact",
+    //     path: "/contact"
+    // },
 ];
