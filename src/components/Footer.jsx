@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className='px-3 md:px-8 lg:px-12 py-12 mt-12 bg-[#FF5733] text-white'> 
@@ -7,7 +6,7 @@ const Footer = () => {
           {/* Store Name and Tagline */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h2 className="text-2xl font-bold">Ladakh-e-Hatti</h2>
-            <p className="mt-2">Bringing Ladakh's treasures to your doorstep</p>
+            <p className="mt-2">Bringing Ladakhs treasures to your doorstep</p>
           </div>
 
           {/* Quick Links */}
@@ -32,3 +31,4 @@ const Footer = () => {
 }
 
 export default Footer
+ 
