@@ -2,11 +2,14 @@ import React from 'react';
 import {MobileCartIcon, MenuIcon, MenuItems, NavbarTitle} from './Icons';
 import Link from 'next/link';
 import NavIcons from './NavIcons';
+import Container from './Layout';
+
+
 
 const Navbar = () => {
-    return (
-        <div
-            className='px-3 h-20 md:px-8 lg:px-12 py-2 bg-red-800 flex items-center relative'>
+    return ( 
+         <div
+            className='px-3 h-20 md:px-8 lg:px-12 py-2 bg-[#FF5733] flex items-center relative'>
             {/* Mobile Navbar */}
             <div
                 className='flex md:hidden overflow-hidden w-full items-center justify-between'>
@@ -23,8 +26,9 @@ const Navbar = () => {
                 <NavbarTitle/>
                 <MenuItems/>
                  <NavIcons/>
+                
             </div>
-        </div>
+        </div> 
     );
 };
 

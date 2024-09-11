@@ -36,7 +36,7 @@ body {
 }
  
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: #FF5733; 
 }
  
 ::-webkit-scrollbar-thumb {
@@ -44,7 +44,7 @@ body {
 }
  
 ::-webkit-scrollbar-thumb:hover {
-  background: #800;
+  background: #FF5733;
 }
 
 /*
@@ -73,5 +73,20 @@ body {
     #FFDB58
     #FFFAFA
     #B22222
+
+================================
+#FFE5D9
+
+===== 
+#581845
+#900C3F
+#C70039
+#FF5733
+#FFC300
+#DAF7A6
+
+zinc-50 /200
+
+
  
      */

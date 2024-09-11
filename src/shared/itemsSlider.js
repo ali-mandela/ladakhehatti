@@ -3,9 +3,9 @@ export const SliderItems = [
         id: 1,
         label: "New Launch",
         title: "Spicier Than Ever from the Roots of Ladakh",
-        src: "https://img.freepik.com/free-psd/black-cap-isolated-background_1409-3415.jpg?w=7" +
-                "40&t=st=1725881480~exp=1725882080~hmac=59ec70850c10ab3d8b2b99bbfef3dbbeabd78d827" +
-                "42c0816cc6a92d7d60f963c",
+        src: "https://img.freepik.com/free-psd/white-metallic-bottle_176382-1360.jpg?t=st=1726" +
+                "058583~exp=1726062183~hmac=b89e0f6024e7916f514e391c79a4e1cf898cc4f8269b5b43bee7f" +
+                "2faa6d482b2&w=740",
         desc: "Discover the authentic spices of Ladakh, crafted to bring out the natural flavor" +
                 "s in your meals. Perfect for spicing up your dishes.",
         path: "/"
@@ -13,9 +13,9 @@ export const SliderItems = [
         id: 2,
         label: "Organic Special",
         title: "Pure Himalayan Honey",
-        src: "https://img.freepik.com/free-psd/isolated-handled-black-tshirt_125540-2262.jpg?t" +
-                "=st=1725881747~exp=1725885347~hmac=8dc9c66e9d2e70c79f8584b00ae3d4f8a7f4c105e9919" +
-                "84c8c971fcc96e9938b&w=826",
+        src: "https://img.freepik.com/free-psd/cosmetic-elements-white-background-mock-up-desi" +
+                "gn_1135-79.jpg?t=st=1726058477~exp=1726062077~hmac=c927df2b69ef0ef95c79f6a5b6785" +
+                "c9d7bcce81218c5dacd8a54a2bd7fd2c521&w=826",
         desc: "Sourced from the pristine valleys of the Himalayas, our honey is 100% pure, orga" +
                 "nic, and full of natural goodness.",
         path: "/"

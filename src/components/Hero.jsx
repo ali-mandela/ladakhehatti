@@ -4,6 +4,8 @@ import {useEffect, useState} from 'react';
 import { NextIcon, PrevIcon } from './SliderIcons';
 import Link from 'next/link';
 import { SliderItems } from '@/shared/itemsSlider';
+import Container from './Layout';
+
 
 const HeroComponent = () => {
   const [current, setcurrent] = useState(0);
@@ -26,7 +28,7 @@ useEffect(() => {
 }, [length]);  
 
   return ( 
-    <> <div className='hidden md:block h-[70vh] relative'> 
+    <Container > <div className='hidden md:block h-[70vh] relative  	'> 
     <Slider item={items[current]}/>
     <div className=' absolute flex gap-8 items-center right-2 bottom-2'>
     <PrevIcon onHandle={handlePrev} color='#800000'/>
@@ -44,8 +46,8 @@ useEffect(() => {
             <NextIcon size={22} onHandle={handleNext} color='grey'/>
           </div>
                  
-    </div>
-</>
+    </div> 
+</Container>
   )
 }
 
@@ -55,7 +57,7 @@ export const Slider=({item})=>{
     <h1 className='px-12 text-base font-light text-lh'>{item?.label}</h1>
      <div className='bg-[#80000034] px-12 shadow-xl h-[25vh] mt-6 relative flex items-center'> 
          <h1 className='text-3xl text-gray-700 w-1/2 font-medium leading-10'>{item?.title}</h1>
-         <Image className='absolute -top-[50px] right-0' src={item?.src} width={380} height={380} alt='product image' />
+         <Image className='absolute -top-[50px] right-0 mix-blend-multiply	' src={item?.src} width={380} height={380} alt='product image' />
      </div>
      <div className='px-12 pt-6 w-2/3'>
          <p className='leading-7 text-base text-gray-600 font-light'>{item?.desc}</p>

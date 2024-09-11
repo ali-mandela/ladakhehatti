@@ -17,7 +17,7 @@ export default function RootLayout({children}) {
         <html lang="en">
             <body className={zillaS.className}>
                 <Navbar/>
-                <main className='bg-neutral-200 px-3 md:px-8 lg:px-12 py-1 min-h-[calc(100vh-160px)]'>
+                <main className='min-h-[calc(100vh-160px)]'>
                     {children}
                 </main>
                 <Footer/>
