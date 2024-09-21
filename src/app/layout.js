@@ -15,9 +15,9 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-            <body className={zillaS.className}>
+            <body className={`bg-zinc-50 ${zillaS.className}`}>
                 <Navbar/>
-                <main className='min-h-[calc(100vh-160px)]'>
+                <main className='  min-h-[calc(100vh-160px)]'>
                     {children}
                 </main>
                 <Footer/>

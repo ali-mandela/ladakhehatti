@@ -1,26 +1,21 @@
-import React from 'react'
-import Container from './Layout'
-import Image from 'next/image'
-import { ProductItems } from '@/shared/itemsSlider'
-import Button from './Button'
+import React from 'react' 
+import Image from 'next/image'  
 
 const Products = ({
-    title = ''
+    title = '',
+    data
 }) => {
-    return (
-        <Container>
+    return ( 
             <div className='my-12'>
                 <h1
                     className='text-2xl md:text-3xl text-center text-clip font-bold text-[#C70039]'>{title}</h1>
                 <div className='my-12 grid grid-cols-2 md:grid-cols-4 gap-4'>
                      {
-                        ProductItems.map((item)=><ProductItem key={item.id} data={item} />)
+                        data.map((item)=><ProductItem key={item.id} data={item} />)
                      }
-                </div>
-                <Button/>
+                </div> 
 
-            </div>
-        </Container>
+            </div> 
     )
 }
 

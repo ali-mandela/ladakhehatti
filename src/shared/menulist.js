@@ -34,13 +34,8 @@ export const mneuweb = [
     // },
     {
         id: 2,
-        name: "Shop",
+        name: "Shop Now",
         path: "/shop"
-    },
-    {
-        id: 7,
-        name: "Brands",
-        path: "/brand"
     },
     {
         id: 3,
@@ -48,9 +43,14 @@ export const mneuweb = [
         path: "/story"
     },
     {
+        id: 7,
+        name: "Brands",
+        path: "/brand"
+    },
+    {
         id: 5,
-        name: "About Us",
-        path: "/about"
+        name: "Contact",
+        path: "/contact"
     },
     // {
     //     id: 4,
